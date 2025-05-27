@@ -1,0 +1,273 @@
+/* SikmaV3 - assets/css/auth_forms.css (Pembaruan Tampilan V.3) */
+
+/* Styling untuk Halaman/Container Login & Register */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Default align-items ke tengah */
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--body-bg); 
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000; 
+    transition: background-color 0.3s;
+    overflow-y: auto; 
+}
+
+.auth-form-wrapper {
+    background-color: var(--card-bg);
+    padding: 30px 25px; /* Atas/Bawah 30px, Kiri/Kanan 25px */
+    border-radius: 16px; 
+    box-shadow: 0 10px 30px var(--shadow-color); /* Shadow sedikit lebih soft */
+    width: 100%;
+    max-width: 400px; /* DIKURANGI LAGI: dari 430px menjadi 400px */
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s, max-width 0.3s ease;
+    margin: 20px auto; /* Margin auto untuk centering horizontal */
+}
+
+/* Jika konten form lebih panjang dari viewport, .auth-container akan scroll.
+   Untuk kasus di mana form itu sendiri yang sangat panjang di layar kecil,
+   .auth-form-wrapper mungkin perlu max-height dan overflow-y sendiri,
+   tapi biasanya overflow-y di .auth-container sudah cukup.
+   Jika .auth-container menggunakan align-items: flex-start; maka margin: auto; pada wrapper akan center.
+*/
+@media (min-height: 600px) { /* Jika tinggi layar cukup, tengahkan form secara vertikal */
+    .auth-container {
+        align-items: center;
+    }
+    .auth-form-wrapper {
+         margin: 20px auto; /* Tetap auto untuk horizontal, vertikal dihandle flex */
+    }
+}
+@media (max-height: 599px) { /* Jika layar pendek, mulai dari atas */
+    .auth-container {
+        align-items: flex-start;
+    }
+     .auth-form-wrapper {
+        margin: 30px auto; /* Beri margin atas agar tidak terlalu mepet */
+    }
+}
+
+
+.auth-form-wrapper .logo-auth {
+    margin-bottom: 20px; /* Disesuaikan */
+}
+
+.auth-form-wrapper .logo-auth img {
+    max-width: 60px; 
+    height: auto;
+}
+
+.auth-form-wrapper h1 {
+    font-size: 20px; 
+    color: var(--text-color); 
+    margin-bottom: 8px; 
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.auth-form-wrapper p.subtitle {
+    font-size: 13px; 
+    color: var(--text-muted); 
+    margin-bottom: 20px; 
+}
+
+.auth-form-wrapper .form-group {
+    margin-bottom: 14px; 
+    text-align: left; 
+}
+
+.auth-form-wrapper .form-group label {
+    font-size: 12px; /* Label lebih kecil */
+    color: var(--form-label-color); 
+    margin-bottom: 5px; 
+    font-weight: 500;
+    display: block; 
+}
+
+.auth-form-wrapper .form-group input[type="text"],
+.auth-form-wrapper .form-group input[type="email"],
+.auth-form-wrapper .form-group input[type="password"],
+.auth-form-wrapper .form-group select {
+    width: 100%; 
+    padding: 9px 10px; /* Padding input disesuaikan */
+    font-size: 13px; 
+    border: 1px solid var(--input-border);
+    border-radius: 6px; /* Radius lebih kecil */
+    background-color: var(--input-bg);
+    color: var(--form-input-text);
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+    font-family: inherit;
+    line-height: 1.4; 
+}
+
+.auth-form-wrapper .form-group select {
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23${'var(--text-muted)'.replace('#', '')}' width='14px' height='14px'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E"); 
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    padding-right: 30px; 
+}
+.dark-theme .auth-form-wrapper .form-group select {
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23${'var(--text-muted-dark)'.replace('#', '')}' width='14px' height='14px'%3E%3Cpath d='M7 10l5 5 5-5H7z'/%3E%3C/svg%3E");
+}
+
+
+.auth-form-wrapper .form-group input:focus,
+.auth-form-wrapper .form-group select:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 2px var(--input-focus-shadow); /* Shadow focus lebih tipis */
+}
+
+.auth-form-wrapper .password-wrapper {
+    position: relative;
+}
+.auth-form-wrapper .password-wrapper input[type="password"],
+.auth-form-wrapper .password-wrapper input[type="text"] { 
+    padding-right: 35px; 
+}
+.auth-form-wrapper .toggle-password {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 14px; 
+}
+
+.auth-form-wrapper .password-strength-indicator {
+    font-size: 10px; 
+    margin-top: 3px; 
+    display: block;
+    height: 14px;
+}
+
+
+.auth-form-wrapper .form-inline-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px; 
+    font-size: 12px; 
+}
+.auth-form-wrapper .forgot-password-link {
+    color: var(--link-color);
+    font-size: 11px; 
+    white-space: nowrap; 
+}
+
+.auth-form-wrapper .checkbox-container {
+    margin-bottom: 0; 
+    font-size: 11px; 
+    padding-left: 24px; 
+    line-height: 1.3; 
+}
+.auth-form-wrapper .checkbox-container .checkmark {
+    top: 0px; 
+    width: 14px; 
+    height: 14px;
+}
+.auth-form-wrapper .checkbox-container .checkmark:after {
+    left: 4px; 
+    top: 1px;
+    width: 3px;
+    height: 6px;
+}
+.auth-form-wrapper .checkbox-container a { 
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+
+.auth-form-wrapper .btn-auth {
+    width: 100%;
+    padding: 10px 16px; 
+    font-size: 14px; 
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px; /* Radius tombol disesuaikan */
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px; 
+}
+.auth-form-wrapper .btn-auth:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-1px); 
+}
+
+.auth-form-wrapper .switch-form-link {
+    display: block;
+    margin-top: 18px; 
+    font-size: 12px; 
+    color: var(--text-muted);
+}
+.auth-form-wrapper .switch-form-link a {
+    color: var(--primary-color);
+    font-weight: 500; /* Sedikit lebih tipis */
+    text-decoration: none;
+}
+
+.auth-form-wrapper .auth-message {
+    margin-bottom: 14px; 
+    padding: 8px 12px; /* Padding pesan disesuaikan */
+    font-size: 12px; 
+}
+
+/* Responsive adjustments untuk auth forms */
+@media (max-width: 420px) { /* Breakpoint disesuaikan dengan max-width form */
+    .auth-container {
+        padding: 10px; /* Padding container lebih kecil di mobile */
+        align-items: flex-start; /* Form mulai dari atas di mobile */
+    }
+    .auth-form-wrapper {
+        padding: 20px 15px; 
+        margin: 15px; 
+        max-width: none; /* Biarkan mengisi padding container */
+        border-radius: 12px; /* Radius lebih kecil sedikit */
+    }
+    .auth-form-wrapper h1 {
+        font-size: 18px; 
+    }
+    .auth-form-wrapper p.subtitle {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    .auth-form-wrapper .form-group {
+        margin-bottom: 12px; 
+    }
+    .auth-form-wrapper .form-group input[type="text"],
+    .auth-form-wrapper .form-group input[type="email"],
+    .auth-form-wrapper .form-group input[type="password"],
+    .auth-form-wrapper .form-group select {
+        font-size: 13px; 
+        padding: 9px 10px; 
+    }
+    .auth-form-wrapper .password-wrapper input[type="password"],
+    .auth-form-wrapper .password-wrapper input[type="text"] {
+        padding-right: 30px; 
+    }
+    .auth-form-wrapper .toggle-password {
+        right: 8px;
+        font-size: 13px;
+    }
+
+    .auth-form-wrapper .form-inline-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px; 
+    }
+    .auth-form-wrapper .btn-auth {
+        font-size: 13px;
+        padding: 9px 15px;
+    }
+}

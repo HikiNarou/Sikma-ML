@@ -1,0 +1,461 @@
+/* SikmaV3 - assets/css/home.css (Perbaikan Hover Tombol) */
+
+/* Home Page Specific Variables */
+:root {
+    --recommendation-card-height: 260px; 
+    --recommendation-card-overlay-start: rgba(0,0,0,0.9); 
+    --recommendation-card-overlay-end: rgba(0,0,0,0.0);   
+    --recommendation-card-hover-overlay-start: rgba(0,0,0,0.95);
+    --recommendation-card-hover-overlay-end: rgba(0,0,0,0.0);
+    --card-hover-effect-img-height: 200px;
+}
+
+/* Internship Recommendations Section */
+.internship-recommendations,
+.explore-companies {
+    margin-bottom: 40px;
+}
+
+.internship-recommendations h2,
+.explore-companies h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--settings-title-color);
+    font-family: 'Roboto', 'Poppins', serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.internship-recommendations h2 i,
+.explore-companies h2 i {
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+/* Swiper Carousel for Recommendations */
+.recommendation-swiper-container {
+    width: 100%;
+    padding-bottom: 55px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.recommendation-card.swiper-slide {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    overflow: hidden;
+    position: relative;
+    height: var(--recommendation-card-height);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 25px; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer; /* Tetap pointer untuk keseluruhan kartu jika ada card-link */
+}
+.recommendation-card.swiper-slide:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--primary-color) 35%, transparent);
+}
+
+.recommendation-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, var(--recommendation-card-overlay-start) 30%, var(--recommendation-card-overlay-end) 85%);
+    border-radius: 15px;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+.recommendation-card:hover .card-overlay {
+    background: linear-gradient(to top, var(--recommendation-card-hover-overlay-start) 35%, var(--recommendation-card-hover-overlay-end) 90%);
+}
+
+.recommendation-card .card-content {
+    position: relative;
+    z-index: 2; /* Konten di atas overlay */
+}
+.recommendation-card h3 { 
+    font-size: 20px; 
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+}
+.recommendation-card .card-subtitle { 
+    font-size: 13px;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.recommendation-details {
+    margin-bottom: 10px;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.recommendation-details p {
+    margin-bottom: 3px;
+    color: #f0f0f0;
+    line-height: 1.4;
+}
+.recommendation-details .score-value {
+    font-weight: bold;
+    color: var(--secondary-color); 
+}
+.recommendation-details .reason-text {
+    font-style: italic;
+    color: #dadada;
+}
+
+.recommendation-card .card-description { 
+    font-size: 12px;
+    line-height: 1.5;
+    color: #d0d0d0;
+    margin-bottom: 15px;
+    height: 36px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.recommendation-card .btn-detail { 
+    padding: 8px 15px;
+    font-size: 13px;
+    background-color: var(--primary-color);
+    color: white !important;
+    /* Pastikan tombol ini punya z-index lebih tinggi dari card-link jika ada tumpang tindih */
+    position: relative; /* Untuk z-index */
+    z-index: 5; /* Lebih tinggi dari card-link (jika card-link z-index:1) dan card-info (z-index:3 saat hover) */
+}
+.recommendation-card .btn-detail:hover {
+    background-color: var(--primary-hover-color);
+}
+
+
+.recommendation-swiper-container .swiper-pagination-bullet {
+    background-color: var(--text-muted);
+    opacity: 0.6;
+    width: 10px;
+    height: 10px;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+.recommendation-swiper-container .swiper-pagination-bullet-active {
+    background-color: var(--swiper-theme-color);
+    opacity: 1;
+}
+.recommendation-swiper-container .swiper-button-next,
+.recommendation-swiper-container .swiper-button-prev {
+    color: var(--primary-color);
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    width: var(--swiper-navigation-size);
+    height: var(--swiper-navigation-size);
+    box-shadow: 0 2px 6px var(--shadow-color);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    top: 50%;
+    transform: translateY(-calc(var(--swiper-navigation-size) / 2 + 20px)); 
+}
+.recommendation-swiper-container .swiper-button-next { right: 10px; } 
+.recommendation-swiper-container .swiper-button-prev { left: 10px; }
+.recommendation-swiper-container .swiper-button-next:hover,
+.recommendation-swiper-container .swiper-button-prev:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-calc(var(--swiper-navigation-size) / 2 + 20px)) scale(1.08);
+}
+.recommendation-swiper-container .swiper-button-next::after,
+.recommendation-swiper-container .swiper-button-prev::after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* Explore Companies Section */
+.explore-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.category-filter select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    min-width: 220px; 
+    transition: border-color 0.2s, background-color 0.3s;
+}
+.category-filter select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--input-focus-shadow);
+}
+
+.active-filter-display {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: var(--tag-bg);
+    border-radius: 8px;
+    display: none; 
+    border: 1px solid var(--border-color);
+}
+
+.company-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.company-grid .card.hidden-by-filter {
+    display: none !important;
+}
+
+.card.card-hover-effect {
+    align-self: start;
+    position: relative;
+    background: var(--card-bg);
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow-color);
+    overflow: hidden;
+}
+.card.card-hover-effect .card-img {
+    visibility: hidden;
+    width: 100%;
+    height: var(--card-hover-effect-img-height);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.card.card-hover-effect .card-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Link pembungkus di bawah konten info */
+}
+.card.card-hover-effect .card-img-hovered {
+    --card-img-hovered-overlay: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%);
+    transition: all 0.35s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: var(--card-hover-effect-img-height);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+    z-index: 0; /* Gambar di paling bawah */
+}
+.card.card-hover-effect .card-img-hovered::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: var(--card-img-hovered-overlay);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: background-image 0.35s ease-in-out;
+    z-index: 1; /* Overlay di atas gambar */
+}
+.card.card-hover-effect .card-info {
+    position: relative;
+    padding: 1rem 1.2rem;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--card-bg);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 2; /* Info di atas link pembungkus dan overlay gambar awal */
+}
+.card.card-hover-effect .card-info .card-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    transition: opacity 0.2s ease-in-out;
+}
+.card.card-hover-effect .card-tag {
+    padding: 0.3rem 0.75rem;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: var(--tag-bg);
+    color: var(--tag-text) !important;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.card.card-hover-effect .card-tag.tag-teknologi { background: #5dade2; color:white !important; }
+.card.card-hover-effect .card-tag.tag-keuangan,
+.card.card-hover-effect .card-tag.tag-keuangan-perbankan { background: #58d68d; color:white !important; }
+.card.card-hover-effect .card-tag.tag-manufaktur { background: #f5b041; color:white !important; }
+.card.card-hover-effect .card-tag.tag-energi-pertambangan { background: #E67E22; color:white !important; }
+.card.card-hover-effect .card-tag.tag-transportasi-logistik { background: #2980B9; color:white !important; }
+.card.card-hover-effect .card-tag.tag-startup { background: #9b59b6; color:white !important; } 
+.card.card-hover-effect .card-tag.tag-pemerintahan { background: #7f8c8d; color:white !important; } 
+.card.card-hover-effect .card-tag.tag-e-commerce { background: #e74c3c; color:white !important; } 
+
+
+.card.card-hover-effect .card-time { 
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+.card.card-hover-effect .card-title {
+    font-family: 'Roboto', 'Poppins', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    transition: all 0.35s ease-in-out;
+    color: var(--text-color);
+    line-height: 1.3;
+}
+.card.card-hover-effect .card-creator { 
+    font-size: 0.9rem;
+    padding-bottom: 0.75rem;
+    transition: opacity 0.25s ease-in-out;
+    color: var(--text-muted);
+    line-height: 1.5;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.card.card-hover-effect .explore-btn-detail {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s, color 0.2s; /* Tambah transisi untuk tombol */
+    position: relative; /* Untuk z-index */
+    z-index: 5; /* Pastikan tombol di atas elemen lain di dalam .card-info */
+}
+
+/* Hover effects for company cards */
+.card.card-hover-effect:hover {
+    cursor: default; /* Ubah cursor default karena link pembungkus mungkin tidak lagi jadi target utama */
+    box-shadow: 0px 10px 25px color-mix(in srgb, var(--shadow-color) 150%, transparent), 
+                0px 5px 12px color-mix(in srgb, var(--shadow-color) 120%, transparent);
+    transform: translateY(-6px) scale(1.025);
+}
+.card.card-hover-effect:hover .card-img-hovered {
+    --card-img-hovered-overlay: linear-gradient(to bottom, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.7) 100%); /* Overlay sedikit lebih ringan agar tombol terlihat */
+    height: 100%;
+    border-radius: 12px;
+}
+.card.card-hover-effect:hover .card-info {
+    background-color: transparent; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.2rem; 
+    z-index: 3; /* Info di atas overlay gambar */
+}
+
+/* PERUBAHAN UTAMA: Tombol "Lihat Detail" tetap terlihat dan berfungsi */
+.card.card-hover-effect:hover .card-about,
+.card.card-hover-effect:hover .card-creator {
+    opacity: 0; /* Sembunyikan tag dan deskripsi singkat */
+    transition-delay: 0s; 
+    pointer-events: none; 
+}
+.card.card-hover-effect:hover .card-title {
+    color: #ffffff; 
+    transform: translateY(-10px); /* Naikkan judul sedikit untuk memberi ruang tombol */
+    padding-bottom: 0;
+    transition: color 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s; 
+}
+.card.card-hover-effect:hover .explore-btn-detail {
+    opacity: 1 !important; /* Pastikan tombol terlihat */
+    pointer-events: auto !important; /* Pastikan tombol bisa diklik */
+    background-color: var(--primary-color); /* Pastikan style tombol tetap */
+    color: white !important;
+    /* Posisikan tombol di bawah judul */
+    transform: translateY(5px); /* Sesuaikan posisi Y jika perlu */
+}
+.card.card-hover-effect:hover .explore-btn-detail:hover {
+    background-color: var(--primary-hover-color) !important;
+}
+
+
+/* Responsive adjustments for Home Page */
+@media (max-width: 1200px) {
+    .company-grid { gap: 20px; }
+}
+@media (max-width: 992px) {
+    .recommendation-card.swiper-slide { height: 240px; }
+    .recommendation-card h3 { font-size: 18px; }
+    .company-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
+@media (max-width: 768px) {
+    .internship-recommendations h2,
+    .explore-companies h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .recommendation-card.swiper-slide {
+        height: 230px;
+        border-radius: 12px;
+        padding: 18px 20px;
+    }
+    .recommendation-card h3 { font-size: 17px; }
+    .recommendation-card .card-description { -webkit-line-clamp: 2; height: auto; font-size: 11px; }
+    .recommendation-details { font-size: 11px; padding: 4px 6px; margin-bottom: 8px;}
+    
+    .explore-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .explore-header h2 { margin-bottom: 10px; }
+    .category-filter { width: 100%; margin-bottom: 15px; }
+    .category-filter select { width: 100%; }
+
+    .company-grid { gap: 15px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+     .card.card-hover-effect .card-title { font-size: 1.1rem; }
+     .card.card-hover-effect .card-creator { font-size: 0.85rem; height: 40px; }
+
+    .recommendation-swiper-container .swiper-button-next,
+    .recommendation-swiper-container .swiper-button-prev {
+        width: calc(var(--swiper-navigation-size) - 6px);
+        height: calc(var(--swiper-navigation-size) - 6px);
+    }
+    .recommendation-swiper-container .swiper-button-next::after,
+    .recommendation-swiper-container .swiper-button-prev::after {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    .internship-recommendations h2, .explore-companies h2 { font-size: 18px; }
+    .recommendation-card.swiper-slide { height: 220px; padding: 15px;}
+    .recommendation-card h3 { font-size: 16px; }
+    .recommendation-card .card-subtitle { font-size: 11px; margin-bottom: 5px; }
+    .recommendation-card .card-description { font-size: 11px; margin-bottom: 12px; }
+    .recommendation-card .btn-detail { padding: 7px 12px; font-size: 12px; }
+    
+    .recommendation-swiper-container .swiper-button-next,
+    .recommendation-swiper-container .swiper-button-prev {
+        display: none; 
+    }
+    .company-grid { grid-template-columns: 1fr; } 
+}
