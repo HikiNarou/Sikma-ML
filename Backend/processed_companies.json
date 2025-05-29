@@ -1,0 +1,643 @@
+[
+  {
+    "id": "PSM001",
+    "name": "PT Pertamina (Persero) - Unit Sumsel",
+    "category": "Energi",
+    "specialization": "Minyak & Gas Bumi (Hulu & Hilir)",
+    "location": "Palembang",
+    "description": "Badan Usaha Milik Negara (BUMN) yang bergerak di bidang energi terintegrasi, meliputi eksplorasi, produksi, pengolahan, distribusi, dan pemasaran minyak, gas, serta energi baru terbarukan di wilayah Sumatera Selatan.",
+    "required_skills": [
+      "Teknik Perminyakan",
+      "Teknik Kimia (Pengolahan)",
+      "Manajemen Proyek Energi",
+      "K3 Migas",
+      "Analisis Data Operasional",
+      "Supply Chain Management Energi",
+      "Geosains"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM002",
+    "name": "PT Pupuk Sriwidjaja Palembang",
+    "category": "Manufaktur",
+    "specialization": "Pupuk & Petrokimia",
+    "location": "Palembang",
+    "description": "Produsen pupuk urea dan industri kimia lainnya, merupakan anak perusahaan BUMN PT Pupuk Indonesia (Persero), berbasis di Palembang.",
+    "required_skills": [
+      "Teknik Kimia",
+      "Teknik Mesin Industri",
+      "Teknik Elektro (Arus Kuat)",
+      "Proses Produksi Pupuk",
+      "Manajemen Kualitas (QC/QA)",
+      "SAP PP/MM",
+      "Instrumentasi & Kontrol Proses",
+      "Logistik Industri"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM003",
+    "name": "PT Bukit Asam Tbk",
+    "category": "Pertambangan",
+    "specialization": "Batubara",
+    "location": "Muara Enim;Palembang",
+    "description": "BUMN yang bergerak di bidang pertambangan batubara, termasuk eksplorasi, produksi, pengangkutan, dan perdagangan batubara.",
+    "required_skills": [
+      "Teknik Pertambangan",
+      "Geologi Batubara",
+      "Manajemen Lingkungan Tambang",
+      "Operasional Alat Berat",
+      "GIS & Pemetaan Tambang",
+      "Perencanaan Tambang Jangka Panjang/Pendek",
+      "Reklamasi Lahan Tambang"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM004",
+    "name": "PT Semen Baturaja (Persero) Tbk",
+    "category": "Material Konstruksi",
+    "specialization": "Semen",
+    "location": "Baturaja (OKU);Palembang",
+    "description": "Produsen semen terkemuka di Sumatera Bagian Selatan, merupakan BUMN yang fokus pada produksi dan distribusi berbagai jenis semen.",
+    "required_skills": [
+      "Teknik Sipil",
+      "Teknik Mesin Produksi Semen",
+      "Teknik Kimia (Proses Semen)",
+      "Manajemen Kualitas Semen",
+      "Operasional Pabrik Semen",
+      "Distribusi & Logistik Material Konstruksi",
+      "R&D Produk Semen"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM006",
+    "name": "PT Telekomunikasi Indonesia Tbk (Telkom) - Witel Sumsel",
+    "category": "Teknologi & Telekomunikasi",
+    "specialization": "Layanan Telekomunikasi & Digital",
+    "location": "Palembang",
+    "description": "BUMN penyedia layanan telekomunikasi dan digital terbesar di Indonesia, melayani berbagai segmen pelanggan di Sumatera Selatan.",
+    "required_skills": [
+      "Teknik Telekomunikasi",
+      "Jaringan Akses (Fiber Optik",
+      " Tembaga)",
+      "Teknologi Informasi & Komunikasi (TIK)",
+      "Cloud Computing (Dasar)",
+      "Manajemen Layanan IT (ITSM)",
+      "Pemasaran Produk Digital",
+      "Layanan Pelanggan Korporat & Ritel"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM007",
+    "name": "PT Bank Sumsel Babel",
+    "category": "Perbankan",
+    "specialization": "Layanan Keuangan & Perbankan Daerah",
+    "location": "Palembang",
+    "description": "Bank Pembangunan Daerah (BPD) Provinsi Sumatera Selatan dan Bangka Belitung, menyediakan berbagai produk dan layanan perbankan.",
+    "required_skills": [
+      "Analisis Kredit (Konsumer",
+      " UKM",
+      " Korporat)",
+      "Manajemen Risiko Perbankan",
+      "Pemasaran Produk Perbankan",
+      "Layanan Nasabah Prima",
+      "Akuntansi Perbankan",
+      "Operasional Cabang Bank",
+      "Perbankan Digital",
+      "Hukum Perbankan"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM008",
+    "name": "PT Perkebunan Nusantara VII (Persero) - Unit Sumsel",
+    "category": "Agribisnis",
+    "specialization": "Perkebunan Komoditas Ekspor",
+    "location": "Beberapa Kabupaten di Sumsel",
+    "description": "Bagian dari Holding Perkebunan Nusantara, mengelola perkebunan komoditas seperti karet, kelapa sawit, dan teh di wilayah Sumatera Selatan.",
+    "required_skills": [
+      "Agronomi Tanaman Karet/Sawit/Teh",
+      "Manajemen Perkebunan Skala Besar",
+      "Pengolahan Hasil Perkebunan (Primer)",
+      "HSE Perkebunan",
+      "Mekanisasi Pertanian",
+      "GIS untuk Perkebunan",
+      "Community Development Perkebunan"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM009",
+    "name": "PT Kereta Api Indonesia (Persero) - Divisi Regional III Palembang",
+    "category": "Transportasi",
+    "specialization": "Transportasi Darat (Perkeretaapian)",
+    "location": "Palembang",
+    "description": "Operator layanan transportasi kereta api penumpang dan barang di wilayah Divisi Regional III, mencakup Sumatera Selatan dan sebagian Lampung.",
+    "required_skills": [
+      "Manajemen Transportasi Darat",
+      "Operasional Perkeretaapian",
+      "Teknik Sarana Kereta Api (Lokomotif",
+      " Gerbong)",
+      "Teknik Prasarana Kereta Api (Rel",
+      " Jembatan)",
+      "Sistem Persinyalan Kereta Api",
+      "Layanan Penumpang Kereta",
+      "Logistik Barang via Kereta"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM010",
+    "name": "PT Pelabuhan Indonesia (Persero) - Regional 2 Palembang",
+    "category": "Logistik & Transportasi",
+    "specialization": "Layanan Kepelabuhanan",
+    "location": "Palembang",
+    "description": "Operator pelabuhan yang menyediakan layanan bongkar muat barang, terminal peti kemas, dan jasa kepelabuhanan lainnya di Palembang.",
+    "required_skills": [
+      "Manajemen Logistik Maritim",
+      "Operasional Terminal Peti Kemas/Curah",
+      "Kepabeanan & Prosedur Ekspor-Impor",
+      "Manajemen Rantai Pasok Pelabuhan",
+      "HSE Pelabuhan",
+      "Sistem Informasi Pelabuhan"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM011",
+    "name": "PT Angkasa Pura II (Persero) - Bandara Sultan Mahmud Badaruddin II",
+    "category": "Transportasi",
+    "specialization": "Transportasi Udara (Pengelola Bandara)",
+    "location": "Palembang",
+    "description": "Pengelola Bandara Internasional Sultan Mahmud Badaruddin II Palembang, menyediakan fasilitas dan layanan kebandarudaraan.",
+    "required_skills": [
+      "Manajemen Operasional Bandara",
+      "Layanan Penerbangan (Passenger Handling",
+      " Ground Handling)",
+      "Keamanan Penerbangan (AVSEC)",
+      "Air Traffic Services (Dasar)",
+      "Manajemen Fasilitas Bandara",
+      "Pemasaran & Komersial Bandara"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM013",
+    "name": "PT Asuransi Jasa Indonesia (Jasindo) - Cabang Palembang",
+    "category": "Asuransi",
+    "specialization": "Asuransi Umum",
+    "location": "Palembang",
+    "description": "Perusahaan asuransi umum milik negara yang menyediakan berbagai produk asuransi kerugian seperti kebakaran, kendaraan, dan pengangkutan.",
+    "required_skills": [
+      "Underwriting Asuransi Umum",
+      "Manajemen Klaim Asuransi",
+      "Pemasaran Produk Asuransi",
+      "Analisis Risiko Asuransi",
+      "Hukum Asuransi",
+      "Reasuransi (Dasar)"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM014",
+    "name": "PT Waskita Karya (Persero) Tbk - Proyek Sumsel",
+    "category": "Konstruksi",
+    "specialization": "Infrastruktur & Bangunan",
+    "location": "Palembang; lokasi proyek",
+    "description": "BUMN konstruksi yang mengerjakan berbagai proyek infrastruktur strategis dan bangunan di Sumatera Selatan.",
+    "required_skills": [
+      "Teknik Sipil (Struktur",
+      " Jalan",
+      " Jembatan",
+      " Air)",
+      "Manajemen Proyek Konstruksi",
+      "Estimasi Biaya Proyek (Quantity Surveyor)",
+      "Metode Pelaksanaan Konstruksi",
+      "AutoCAD & Software Desain Teknik",
+      "HSE Konstruksi",
+      "Manajemen Kontrak Konstruksi"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM015",
+    "name": "PT Hutama Karya (Persero) - Proyek Tol Trans Sumatera",
+    "category": "Konstruksi",
+    "specialization": "Infrastruktur Jalan Tol",
+    "location": "Palembang; lokasi proyek",
+    "description": "BUMN konstruksi yang fokus pada pembangunan infrastruktur, terutama Jalan Tol Trans Sumatera di wilayah Sumatera Selatan.",
+    "required_skills": [
+      "Teknik Sipil (Jalan Tol & Jembatan)",
+      "Manajemen Proyek Jalan Tol",
+      "Teknologi Konstruksi Jalan",
+      "Survei & Pemetaan Lahan Tol",
+      "Manajemen Lalu Lintas Proyek",
+      "Pengadaan & Kontrak Konstruksi Tol"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM016",
+    "name": "PT OKI Pulp & Paper Mills (APP Sinar Mas)",
+    "category": "Manufaktur",
+    "specialization": "Industri Pulp & Kertas",
+    "location": "Ogan Komering Ilir (OKI)",
+    "description": "Salah satu pabrik pulp dan kertas terbesar di Asia, memproduksi berbagai jenis pulp, kertas industri, dan tisu.",
+    "required_skills": [
+      "Teknologi Produksi Pulp",
+      "Teknologi Produksi Kertas",
+      "Teknik Mesin Industri Berat",
+      "Teknik Kimia Proses Pulp & Kertas",
+      "Manajemen Energi & Utilitas Pabrik Besar",
+      "Pengolahan Limbah Industri Pulp & Kertas",
+      "Sistem Kontrol Proses (DCS)"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM017",
+    "name": "PT Bank Central Asia Tbk (BCA) - Kantor Wilayah VI Palembang",
+    "category": "Perbankan",
+    "specialization": "Layanan Keuangan & Perbankan Swasta",
+    "location": "Palembang",
+    "description": "Salah satu bank swasta terbesar di Indonesia, menyediakan berbagai layanan perbankan konsumer, komersial, dan korporat di Sumsel.",
+    "required_skills": [
+      "Analisis Kredit (Konsumer",
+      " Komersial)",
+      "Wealth Management",
+      "Digital Banking Product Management",
+      "Operasional Perbankan Modern",
+      "Customer Relationship Management (CRM)",
+      "Treasury (Dasar)",
+      "Manajemen Risiko Perbankan Swasta"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM018",
+    "name": "PT Charoen Pokphand Indonesia Tbk - Unit Sumsel",
+    "category": "Agribisnis",
+    "specialization": "Industri Pakan Ternak & Peternakan Terpadu",
+    "location": "Beberapa lokasi di Sumsel",
+    "description": "Perusahaan agribisnis terkemuka yang bergerak di bidang produksi pakan ternak, pembibitan ayam, pengolahan ayam, dan makanan olahan.",
+    "required_skills": [
+      "Nutrisi Ternak Unggas/Ikan",
+      "Teknologi Produksi Pakan",
+      "Manajemen Peternakan Ayam (Broiler/Layer)",
+      "Kesehatan Hewan & Biosecurity",
+      "Quality Control Pakan & Produk Ternak",
+      "Sales & Marketing Pakan/DOC"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM019",
+    "name": "Universitas Sriwijaya (UNSRI)",
+    "category": "Pendidikan",
+    "specialization": "Pendidikan Tinggi & Penelitian",
+    "location": "Palembang; Indralaya",
+    "description": "Perguruan tinggi negeri terbesar dan tertua di Sumatera Selatan, menawarkan berbagai program studi dan kegiatan penelitian.",
+    "required_skills": [
+      "Administrasi Akademik & Kemahasiswaan",
+      "Manajemen Penelitian & Publikasi Ilmiah",
+      "Pengembangan Kurikulum",
+      "Sistem Informasi Akademik",
+      "Kerjasama Universitas & Industri",
+      "Perpustakaan Digital & Literasi Informasi",
+      "Pengabdian Masyarakat"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM020",
+    "name": "PT Medco E&P Indonesia - South Sumatra Block",
+    "category": "Energi",
+    "specialization": "Minyak & Gas Bumi (Hulu)",
+    "location": "Beberapa lokasi di Sumsel",
+    "description": "Perusahaan energi swasta nasional yang bergerak di bidang eksplorasi dan produksi minyak dan gas bumi di blok Sumatera Selatan.",
+    "required_skills": [
+      "Teknik Perminyakan (Produksi/Reservoir)",
+      "Operasi Lapangan Migas",
+      "Geologi & Geofisika Eksplorasi",
+      "Fasilitas Produksi Migas",
+      "HSE Operasi Migas",
+      "Manajemen Proyek Pengeboran",
+      "Analisis Ekonomi Migas"
+    ],
+    "data_source": "Transkripsi Gambar & Riset"
+  },
+  {
+    "id": "PSM022",
+    "name": "PT Sriwijaya Optimis Mandiri (Sriwijaya FC)",
+    "category": "Olahraga & Hiburan",
+    "specialization": "Klub Sepak Bola Profesional",
+    "location": "Palembang",
+    "description": "Klub sepak bola profesional yang berbasis di Palembang, berlaga di kompetisi sepak bola nasional.",
+    "required_skills": [
+      "Manajemen Klub Olahraga",
+      "Pemasaran & Sponsorship Olahraga",
+      "Media & Komunikasi Olahraga",
+      "Manajemen Event Pertandingan",
+      "Fisioterapi Olahraga (Dasar)",
+      "Scouting & Analisis Pemain (Dasar)"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM023",
+    "name": "PT PLN Nusantara Power - Pembangkitan Sumsel",
+    "category": "Utilitas",
+    "specialization": "Ketenagalistrikan (Pembangkitan)",
+    "location": "Beberapa lokasi di Sumsel",
+    "description": "Anak perusahaan PLN yang fokus pada operasional dan pemeliharaan unit-unit pembangkit tenaga listrik di wilayah Sumatera Selatan.",
+    "required_skills": [
+      "Operasi Pembangkit Listrik (PLTU",
+      " PLTG",
+      " PLTA)",
+      "Pemeliharaan Mesin Pembangkit",
+      "Pemeliharaan Listrik Pembangkit",
+      "Sistem Kontrol Pembangkit (PLC/DCS)",
+      "Efisiensi Energi Pembangkit",
+      "K3 Lingkungan Pembangkitan"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM024",
+    "name": "PT Citra Sriwijaya Tol (Group Astra Infra)",
+    "category": "Konstruksi & Infrastruktur",
+    "specialization": "Operator Jalan Tol",
+    "location": "Palembang; Kayu Agung",
+    "description": "Badan Usaha Jalan Tol (BUJT) yang mengoperasikan ruas tol Kayu Agung - Palembang - Betung (Kapal Betung).",
+    "required_skills": [
+      "Manajemen Operasional Jalan Tol",
+      "Sistem Transaksi Tol Elektronik",
+      "Pemeliharaan Infrastruktur Jalan Tol",
+      "Manajemen Lalu Lintas Tol",
+      "Layanan Pengguna Jalan Tol",
+      "Manajemen Aset Jalan Tol"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM025",
+    "name": "PT Sinarmas Forestry - Unit Sumsel",
+    "category": "Agribisnis & Kehutanan",
+    "specialization": "Hutan Tanaman Industri (HTI)",
+    "location": "Beberapa lokasi di Sumsel",
+    "description": "Bagian dari grup Sinarmas yang mengelola Hutan Tanaman Industri untuk pasokan bahan baku industri pulp dan kertas.",
+    "required_skills": [
+      "Manajemen Hutan Tanaman Industri (Acacia",
+      " Eucalyptus)",
+      "Silvikultur & Pembibitan",
+      "Perencanaan Kehutanan & Inventarisasi Hutan",
+      "Pemetaan GIS/Remote Sensing Kehutanan",
+      "Perlindungan Hutan & Pengendalian Kebakaran",
+      "Sertifikasi Kehutanan Lestari (FSC/PEFC)"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM027",
+    "name": "Hotel Aryaduta Palembang",
+    "category": "Perhotelan & Pariwisata",
+    "specialization": "Akomodasi & Layanan Perhotelan",
+    "location": "Palembang",
+    "description": "Hotel bintang lima yang menawarkan layanan akomodasi, MICE (Meeting, Incentive, Convention, Exhibition), dan kuliner.",
+    "required_skills": [
+      "Manajemen Operasional Hotel",
+      "Front Office Management",
+      "Food & Beverage Service/Production",
+      "Housekeeping Management",
+      "Sales & Marketing Perhotelan",
+      "Manajemen Event & Banquet",
+      "Guest Relations"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM028",
+    "name": "PT Japfa Comfeed Indonesia Tbk - Unit Sumsel",
+    "category": "Agribisnis",
+    "specialization": "Peternakan Terpadu & Pakan",
+    "location": "Beberapa lokasi di Sumsel",
+    "description": "Perusahaan agribisnis yang bergerak di bidang pakan ternak, peternakan ayam, ikan, dan produk makanan olahan.",
+    "required_skills": [
+      "Manajemen Produksi Pakan Ternak",
+      "Budidaya Ternak Ayam (Breeding/Broiler)",
+      "Budidaya Ikan Air Tawar/Payau",
+      "Kesehatan Hewan Ternak & Akuakultur",
+      "Quality Control Produk Peternakan",
+      "Rantai Dingin Distribusi Produk Segar/Beku"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM029",
+    "name": "Rumah Sakit Umum Pusat Dr. Mohammad Hoesin",
+    "category": "Kesehatan",
+    "specialization": "Layanan Kesehatan Rujukan Nasional",
+    "location": "Palembang",
+    "description": "Rumah sakit vertikal milik Kementerian Kesehatan, menjadi pusat rujukan nasional dan pendidikan kedokteran di Sumatera Selatan.",
+    "required_skills": [
+      "Manajemen Pelayanan Medis & Keperawatan",
+      "Administrasi Rumah Sakit",
+      "Rekam Medis & Sistem Informasi RS",
+      "Farmasi Klinis & Manajemen Obat",
+      "Penunjang Medis (Laboratorium",
+      " Radiologi)",
+      "Penelitian Kesehatan"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM030",
+    "name": "PT Bank Syariah Indonesia Tbk (BSI) - Area Palembang",
+    "category": "Perbankan",
+    "specialization": "Layanan Keuangan & Perbankan Syariah",
+    "location": "Palembang",
+    "description": "Bank syariah terbesar di Indonesia, hasil merger beberapa bank syariah BUMN, menyediakan produk dan layanan berbasis prinsip syariah.",
+    "required_skills": [
+      "Prinsip & Produk Perbankan Syariah",
+      "Analisis Pembiayaan Syariah (Murabahah",
+      " Mudharabah",
+      " Musyarakah)",
+      "Manajemen Dana Pihak Ketiga Syariah",
+      "Pemasaran Produk Keuangan Syariah",
+      "Operasional Bank Syariah",
+      "Audit Kepatuhan Syariah"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM031",
+    "name": "PT GoTo Gojek Tokopedia Tbk - Operasional Palembang",
+    "category": "Teknologi & Layanan",
+    "specialization": "Platform Digital Multi-Layanan",
+    "location": "Palembang",
+    "description": "Perusahaan teknologi yang menyediakan layanan on-demand (transportasi, logistik, pembayaran), e-commerce, dan financial technology.",
+    "required_skills": [
+      "Manajemen Operasional Platform Digital",
+      "Akuisisi & Manajemen Merchant/Driver",
+      "Pemasaran Digital Lokal",
+      "Analisis Data Perilaku Pengguna Lokal",
+      "Layanan Pelanggan Platform",
+      "Pengembangan Komunitas Pengguna/Mitra"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM032",
+    "name": "PT Erajaya Swasembada Tbk - Retail Area Palembang",
+    "category": "Ritel",
+    "specialization": "Distribusi & Ritel Produk Digital & Gaya Hidup",
+    "location": "Palembang",
+    "description": "Distributor dan peritel besar produk telekomunikasi (handphone, gadget), IoT, dan produk gaya hidup digital lainnya.",
+    "required_skills": [
+      "Manajemen Ritel Modern",
+      "Visual Merchandising",
+      "Manajemen Inventaris Ritel",
+      "Pemasaran Produk Gadget & Elektronik",
+      "Layanan Pelanggan Ritel",
+      "Analisis Penjualan Ritel"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM033",
+    "name": "Dinas Komunikasi dan Informatika Provinsi Sumatera Selatan",
+    "category": "Layanan Publik",
+    "specialization": "Teknologi Informasi & Komunikasi Pemerintahan",
+    "location": "Palembang",
+    "description": "Instansi pemerintah daerah yang bertanggung jawab atas pengelolaan TIK, persandian, statistik sektoral, dan diseminasi informasi publik.",
+    "required_skills": [
+      "Pengembangan & Pengelolaan Aplikasi Pemerintahan (e-Government)",
+      "Manajemen Jaringan & Infrastruktur TIK Pemerintah",
+      "Keamanan Informasi Pemerintah (Dasar)",
+      "Analisis & Tata Kelola Data Pemerintah",
+      "Komunikasi Publik & Kehumasan Pemerintah"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM034",
+    "name": "Balai Besar Wilayah Sungai Sumatera VIII",
+    "category": "Layanan Publik",
+    "specialization": "Pengelolaan Sumber Daya Air",
+    "location": "Palembang",
+    "description": "Unit pelaksana teknis Kementerian PUPR yang bertugas mengelola sumber daya air di wilayah sungai Sumatera VIII, termasuk Sumsel.",
+    "required_skills": [
+      "Teknik Sipil Sumber Daya Air (Irigasi",
+      " Drainase",
+      " Bendungan)",
+      "Hidrologi & Hidrometri",
+      "Perencanaan & Pengelolaan DAS",
+      "Operasi & Pemeliharaan Infrastruktur Air",
+      "GIS untuk Sumber Daya Air"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM035",
+    "name": "PT Musi Banyuasin Electric Power (BUMD Muba)",
+    "category": "Energi",
+    "specialization": "Ketenagalistrikan Lokal",
+    "location": "Sekayu (Muba)",
+    "description": "Badan Usaha Milik Daerah Kabupaten Musi Banyuasin yang bergerak di bidang penyediaan tenaga listrik lokal.",
+    "required_skills": [
+      "Teknik Distribusi Tenaga Listrik Skala Kecil",
+      "Manajemen Operasional Pembangkit Listrik Lokal (Diesel/Gas)",
+      "Pelayanan Pelanggan Listrik Pedesaan",
+      "Manajemen Keuangan BUMD Energi"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM036",
+    "name": "PT Telkomsel - Regional Sumbagsel",
+    "category": "Teknologi & Telekomunikasi",
+    "specialization": "Layanan Komunikasi Seluler",
+    "location": "Palembang",
+    "description": "Operator layanan telekomunikasi seluler terbesar di Indonesia, melayani wilayah Sumatera Bagian Selatan.",
+    "required_skills": [
+      "Teknologi Jaringan Seluler (4G LTE",
+      " 5G)",
+      "Optimalisasi Jaringan Radio (RF Optimization)",
+      "Pemasaran Produk & Layanan Seluler",
+      "Manajemen Kanal Penjualan (Direct/Indirect)",
+      "Analisis Data Pelanggan Seluler (Customer Analytics)",
+      "Layanan Pelanggan Digital"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM037",
+    "name": "PT Sriwijaya Air - Kantor Palembang",
+    "category": "Transportasi",
+    "specialization": "Transportasi Udara (Maskapai)",
+    "location": "Palembang",
+    "description": "Maskapai penerbangan nasional yang melayani rute domestik dan beberapa rute internasional, dengan salah satu hub operasional di Palembang.",
+    "required_skills": [
+      "Manajemen Operasi Penerbangan",
+      "Sales & Ticketing Maskapai",
+      "Ground Operations & Customer Handling",
+      "Basic Aircraft Maintenance Awareness",
+      "Flight Dispatch (Dasar)",
+      "Safety Management System (SMS) Maskapai"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM038",
+    "name": "PT Askrindo (Asuransi Kredit Indonesia) - Cabang Palembang",
+    "category": "Asuransi",
+    "specialization": "Asuransi Kredit & Penjaminan",
+    "location": "Palembang",
+    "description": "BUMN yang bergerak di bidang asuransi kredit, penjaminan kredit UMKM, dan surety bond.",
+    "required_skills": [
+      "Analisis Kelayakan Kredit Usaha",
+      "Underwriting Asuransi Kredit",
+      "Manajemen Risiko Kredit",
+      "Pemasaran Produk Penjaminan",
+      "Klaim Asuransi Kredit",
+      "Hukum Bisnis & Jaminan"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM039",
+    "name": "Otoritas Jasa Keuangan (OJK) - Kantor Regional 7 Sumbagsel",
+    "category": "Regulator Keuangan",
+    "specialization": "Pengawasan Sektor Jasa Keuangan",
+    "location": "Palembang",
+    "description": "Lembaga independen yang mengawasi seluruh kegiatan di dalam sektor jasa keuangan (perbankan, pasar modal, IKNB) di Sumbagsel.",
+    "required_skills": [
+      "Regulasi Sektor Jasa Keuangan",
+      "Analisis Laporan Keuangan Lembaga Jasa Keuangan",
+      "Pengawasan Kepatuhan (Compliance)",
+      "Perlindungan Konsumen Keuangan",
+      "Literasi & Edukasi Keuangan"
+    ],
+    "data_source": "Riset Tambahan"
+  },
+  {
+    "id": "PSM040",
+    "name": "Lembaga Penyiaran Publik Radio Republik Indonesia (LPP RRI) Palembang",
+    "category": "Media & Penyiaran",
+    "specialization": "Penyiaran Radio Publik",
+    "location": "Palembang",
+    "description": "Stasiun radio publik nasional yang menyiarkan program berita, informasi, hiburan, dan budaya untuk wilayah Palembang dan sekitarnya.",
+    "required_skills": [
+      "Teknik Penyiaran Radio (Audio Engineering)",
+      "Jurnalisme Radio & Produksi Program",
+      "Manajemen Siaran Radio",
+      "Pemasaran & Kerjasama Program Radio",
+      "Digitalisasi Konten Radio & Podcast"
+    ],
+    "data_source": "Riset Tambahan"
+  }
+]

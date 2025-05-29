@@ -1,0 +1,721 @@
+/* SikmaV3 - assets/css/main.css (Diperbarui) */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Custom Properties (Variables) for Theming */
+:root {
+    --primary-color: #3498db; /* Biru utama */
+    --primary-hover-color: #2980b9; /* Biru lebih gelap untuk hover */
+    --secondary-color: #2ecc71; /* Hijau sekunder */
+    --secondary-hover-color: #27ae60; /* Hijau lebih gelap untuk hover */
+    --danger-color: #e74c3c; /* Merah untuk error/bahaya */
+    --danger-hover-color: #c0392b; /* Merah lebih gelap */
+    --warning-color: #f39c12; /* Kuning untuk peringatan */
+    --info-color: #3498db; /* Biru untuk info, bisa sama dengan primary */
+    --light-gray-color: #f0f2f5; /* Abu-abu sangat muda */
+    --medium-gray-color: #ced4da; /* Abu-abu sedang */
+    --dark-gray-color: #6c757d; /* Abu-abu gelap */
+    --white-color: #ffffff;
+    --black-color: #333333;
+
+    /* Light Theme Variables */
+    --body-bg-light: var(--light-gray-color);
+    --card-bg-light: var(--white-color);
+    --text-color-light: var(--black-color);
+    --text-muted-light: var(--dark-gray-color);
+    --border-color-light: #dee2e6;
+    --input-bg-light: var(--white-color);
+    --input-border-light: var(--medium-gray-color);
+    --input-focus-border-light: var(--primary-color);
+    --input-focus-shadow-light: color-mix(in srgb, var(--primary-color) 20%, transparent);
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --tag-bg-light: #e9ecef;
+    --tag-text-light: #495057;
+    --link-color-light: var(--primary-color);
+    --link-hover-color-light: var(--primary-hover-color);
+    --icon-color-light: #555555;
+
+    /* Settings Page Specific - Light */
+    --settings-title-color-light: #172b4d; /* Biru tua untuk judul */
+    --settings-section-title-color-light: #34495e; /* Abu-abu kebiruan untuk subjudul */
+    --settings-border-color-light: #e0e0e0;
+    --settings-section-border-color-light: #ecf0f1;
+    --form-label-color-light: #555;
+    --form-input-bg-settings-light: #fdfdfd;
+    --form-input-border-settings-light: #ddd;
+    --form-input-readonly-bg-light: #ecf0f1;
+    --profile-avatar-border-light: #ecf0f1;
+    --toggle-slider-bg-light: #ccc;
+    --toggle-slider-active-bg-light: var(--primary-color);
+    --preference-item-border-light: #f0f0f0;
+
+    /* Dark Theme Variables */
+    --body-bg-dark: #121212; /* Hitam pekat untuk body */
+    --card-bg-dark: #1e1e1e; /* Abu-abu sangat gelap untuk kartu */
+    --text-color-dark: #e0e0e0; /* Putih keabuan untuk teks */
+    --text-muted-dark: #a0a0a0; /* Abu-abu muda untuk teks muted */
+    --border-color-dark: #3a3a3a; /* Abu-abu gelap untuk border */
+    --input-bg-dark: #2c2c2c; /* Abu-abu lebih gelap untuk input */
+    --input-border-dark: #444444;
+    --input-focus-border-dark: var(--primary-color);
+    --input-focus-shadow-dark: color-mix(in srgb, var(--primary-color) 30%, transparent);
+    --shadow-dark: rgba(255, 255, 255, 0.08);
+    --tag-bg-dark: #333333;
+    --tag-text-dark: #cccccc;
+    --link-color-dark: #6fa8dc; /* Biru muda untuk link */
+    --link-hover-color-dark: #8ec0e4;
+    --icon-color-dark: #bbbbbb;
+
+    /* Settings Page Specific - Dark */
+    --settings-title-color-dark: #e0e0e0;
+    --settings-section-title-color-dark: #c0c0c0;
+    --settings-border-color-dark: #444444;
+    --settings-section-border-color-dark: #3d3d3d;
+    --form-label-color-dark: #a0a0a0;
+    --form-input-bg-settings-dark: #2c2c2c;
+    --form-input-border-settings-dark: #555555;
+    --form-input-readonly-bg-dark: #3a3a3a;
+    --profile-avatar-border-dark: #444444;
+    --toggle-slider-bg-dark: #555555;
+    --toggle-slider-active-bg-dark: var(--primary-color);
+    --preference-item-border-dark: #3d3d3d;
+
+    /* Default to light theme variables */
+    --body-bg: var(--body-bg-light);
+    --card-bg: var(--card-bg-light);
+    --text-color: var(--text-color-light);
+    --text-muted: var(--text-muted-light);
+    --border-color: var(--border-color-light);
+    --input-bg: var(--input-bg-light);
+    --input-border: var(--input-border-light);
+    --input-focus-border: var(--input-focus-border-light);
+    --input-focus-shadow: var(--input-focus-shadow-light);
+    --shadow-color: var(--shadow-light);
+    --tag-bg: var(--tag-bg-light);
+    --tag-text: var(--tag-text-light);
+    --link-color: var(--link-color-light);
+    --link-hover-color: var(--link-hover-color-light);
+    --icon-color: var(--icon-color-light);
+
+    --settings-title-color: var(--settings-title-color-light);
+    --settings-section-title-color: var(--settings-section-title-color-light);
+    --settings-border-color: var(--settings-border-color-light);
+    --settings-section-border-color: var(--settings-section-border-color-light);
+    --form-label-color: var(--form-label-color-light);
+    --form-input-bg-settings: var(--form-input-bg-settings-light);
+    --form-input-border-settings: var(--form-input-border-settings-light);
+    --form-input-text: var(--text-color-light);
+    --form-input-readonly-bg: var(--form-input-readonly-bg-light);
+    --profile-avatar-border: var(--profile-avatar-border-light);
+    --toggle-slider-bg: var(--toggle-slider-bg-light);
+    --toggle-slider-active-bg: var(--toggle-slider-active-bg-light);
+    --preference-item-border: var(--preference-item-border-light);
+    --preference-item-text: var(--text-color-light);
+
+    /* Card Image Height (can be overridden per page) */
+    --card-img-height: 200px;
+    --swiper-navigation-size: 38px;
+    --swiper-theme-color: var(--primary-color);
+}
+
+.dark-theme {
+    --body-bg: var(--body-bg-dark);
+    --card-bg: var(--card-bg-dark);
+    --text-color: var(--text-color-dark);
+    --text-muted: var(--text-muted-dark);
+    --border-color: var(--border-color-dark);
+    --input-bg: var(--input-bg-dark);
+    --input-border: var(--input-border-dark);
+    --input-focus-border: var(--input-focus-border-dark);
+    --input-focus-shadow: var(--input-focus-shadow-dark);
+    --shadow-color: var(--shadow-dark);
+    --tag-bg: var(--tag-bg-dark);
+    --tag-text: var(--tag-text-dark);
+    --link-color: var(--link-color-dark);
+    --link-hover-color: var(--link-hover-color-dark);
+    --icon-color: var(--icon-color-dark);
+
+    --settings-title-color: var(--settings-title-color-dark);
+    --settings-section-title-color: var(--settings-section-title-color-dark);
+    --settings-border-color: var(--settings-border-color-dark);
+    --settings-section-border-color: var(--settings-section-border-color-dark);
+    --form-label-color: var(--form-label-color-dark);
+    --form-input-bg-settings: var(--form-input-bg-settings-dark);
+    --form-input-border-settings: var(--form-input-border-settings-dark);
+    --form-input-text: var(--text-color-dark);
+    --form-input-readonly-bg: var(--form-input-readonly-bg-dark);
+    --profile-avatar-border: var(--profile-avatar-border-dark);
+    --toggle-slider-bg: var(--toggle-slider-bg-dark);
+    --toggle-slider-active-bg: var(--toggle-slider-active-bg-dark);
+    --preference-item-border: var(--preference-item-border-dark);
+    --preference-item-text: var(--text-color-dark);
+    --swiper-theme-color: var(--primary-color);
+}
+
+/* Global Body Styles */
+body {
+    font-family: 'Poppins', 'Open Sans', 'Roboto', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    display: flex; /* Untuk auth-container full height */
+    flex-direction: column; /* Jika ada footer di luar app-container */
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent global horizontal scroll */
+}
+
+/* Typography & Links */
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.2s ease-in-out;
+}
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', 'Poppins', sans-serif; /* Konsistensi font heading */
+    margin-bottom: 0.75em; /* Sedikit lebih banyak margin bawah */
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-color); /* Pastikan warna heading mengikuti tema */
+}
+h1 { font-size: 2rem; } /* 32px */
+h2 { font-size: 1.75rem; } /* 28px */
+h3 { font-size: 1.5rem; } /* 24px */
+h4 { font-size: 1.25rem; } /* 20px */
+
+p {
+    margin-bottom: 1em;
+    color: var(--text-muted);
+}
+p.lead {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Forms General Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--form-label-color);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="url"],
+.form-group input[type="search"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="month"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px; /* Rounded corners */
+    background-color: var(--input-bg);
+    color: var(--form-input-text);
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+    font-family: inherit; /* Inherit font from body/parent */
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 0 3px var(--input-focus-shadow);
+}
+.form-group input[readonly] {
+    background-color: var(--form-input-readonly-bg);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px; /* Prevent extreme squishing */
+}
+
+/* Password Wrapper for Show/Hide Toggle */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] { /* For when type is toggled */
+    padding-right: 40px; /* Space for the icon */
+}
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+.toggle-password:hover {
+    color: var(--primary-color);
+}
+
+/* Password Strength Indicator */
+.password-strength-indicator {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    height: 15px; /* Reserve space */
+}
+.password-strength-indicator.strength-0 { color: var(--danger-color); }
+.password-strength-indicator.strength-1 { color: var(--danger-color); }
+.password-strength-indicator.strength-2 { color: var(--warning-color); }
+.password-strength-indicator.strength-3 { color: var(--secondary-color); }
+.password-strength-indicator.strength-4 { color: var(--secondary-hover-color); }
+
+
+/* Custom Checkbox */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px; /* Space for custom checkbox */
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    color: var(--text-muted);
+}
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+.checkbox-container:hover input ~ .checkmark {
+    border-color: var(--primary-color);
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Buttons General Styling */
+.btn {
+    display: inline-flex; /* For icon alignment */
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    white-space: nowrap; /* Prevent button text wrapping */
+}
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+.btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+.btn i, .btn .fas, .btn .far, .btn .fab { /* FontAwesome icons in buttons */
+    /* margin-right: 6px; Removed, using gap now */
+    font-size: 0.95em;
+}
+.btn.btn-sm {
+    padding: 8px 15px;
+    font-size: 13px;
+}
+.btn.btn-lg {
+    padding: 12px 25px;
+    font-size: 17px;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important; /* Important to override link color if button is <a> */
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--white-color) !important;
+}
+.btn-secondary {
+    background-color: var(--tag-bg);
+    color: var(--tag-text) !important;
+    border: 1px solid var(--border-color);
+}
+.dark-theme .btn-secondary {
+    background-color: var(--tag-bg-dark);
+    color: var(--tag-text-dark) !important;
+    border: 1px solid var(--border-color-dark);
+}
+.btn-secondary:hover {
+    background-color: color-mix(in srgb, var(--tag-bg) 85%, var(--black-color) 15%);
+    border-color: color-mix(in srgb, var(--border-color) 85%, var(--black-color) 15%);
+}
+.dark-theme .btn-secondary:hover {
+    background-color: color-mix(in srgb, var(--tag-bg-dark) 85%, var(--white-color) 15%);
+    border-color: color-mix(in srgb, var(--border-color-dark) 85%, var(--white-color) 15%);
+}
+.btn-danger {
+    background-color: var(--danger-color);
+    color: var(--white-color) !important;
+}
+.btn-danger:hover {
+    background-color: var(--danger-hover-color);
+    color: var(--white-color) !important;
+}
+.btn-success { /* Using secondary-color for success, can be different */
+    background-color: var(--secondary-color);
+    color: var(--white-color) !important;
+}
+.btn-success:hover {
+    background-color: var(--secondary-hover-color);
+    color: var(--white-color) !important;
+}
+
+.btn-save-all { /* Specific for profile save button */
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    color: var(--white-color) !important;
+    margin-top: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%; /* Full width for this specific button */
+}
+.btn-save-all:hover {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-hover-color));
+    box-shadow: 0 6px 15px color-mix(in srgb, var(--primary-color) 30%, transparent);
+}
+
+
+/* Page Structure & Layout */
+.app-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* Ensure app container also takes full height if body has other elements */
+}
+
+.main-content-wrapper {
+    flex-grow: 1;
+    padding: 25px;
+    margin-left: 90px; /* Default sidebar width */
+    overflow-y: auto; /* Scroll for content longer than viewport */
+    overflow-x: hidden; /* Prevent horizontal scroll on content area */
+    background-color: var(--body-bg); /* Match body background */
+    transition: background-color 0.3s, margin-left 0.3s ease;
+    height: 100vh; /* Ensure it takes full viewport height */
+    position: relative; /* For potential absolute positioned children */
+}
+.main-content-wrapper.sidebar-collapsed {
+    margin-left: 70px; /* Collapsed sidebar width */
+}
+
+.page-content {
+    display: none; /* Hidden by default, shown by JS */
+    animation: pageFadeIn 0.4s ease-out;
+}
+.page-content.active {
+    display: block;
+}
+@keyframes pageFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility Classes */
+.hidden { display: none !important; }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+.text-center { text-align: center; }
+.text-danger { color: var(--danger-color) !important; }
+.text-success { color: var(--secondary-color) !important; }
+.text-warning { color: var(--warning-color) !important; }
+.text-info { color: var(--info-color) !important; }
+
+.mt-1 { margin-top: 0.25rem !important; }
+.mt-2 { margin-top: 0.5rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+.mb-1 { margin-bottom: 0.25rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.ml-auto { margin-left: auto !important; }
+.mr-auto { margin-right: auto !important; }
+
+/* Auth Messages (used in login, register, settings, profile page) */
+.auth-message {
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: left;
+    border: 1px solid transparent;
+    display: flex; /* For icon alignment */
+    align-items: center;
+    gap: 10px;
+}
+.auth-message i {
+    font-size: 1.2em; /* Icon size */
+}
+.auth-message.success {
+    background-color: color-mix(in srgb, var(--secondary-color) 15%, transparent);
+    color: var(--secondary-color);
+    border-color: color-mix(in srgb, var(--secondary-color) 50%, transparent);
+}
+.dark-theme .auth-message.success {
+    color: color-mix(in srgb, var(--secondary-color) 80%, var(--white-color) 20%);
+}
+.auth-message.error {
+    background-color: color-mix(in srgb, var(--danger-color) 15%, transparent);
+    color: var(--danger-color);
+    border-color: color-mix(in srgb, var(--danger-color) 50%, transparent);
+}
+.dark-theme .auth-message.error {
+     color: color-mix(in srgb, var(--danger-color) 80%, var(--white-color) 20%);
+}
+.auth-message.info {
+    background-color: color-mix(in srgb, var(--info-color) 15%, transparent);
+    color: var(--info-color);
+    border-color: color-mix(in srgb, var(--info-color) 50%, transparent);
+}
+.dark-theme .auth-message.info {
+     color: color-mix(in srgb, var(--info-color) 80%, var(--white-color) 20%);
+}
+.auth-message.warning {
+    background-color: color-mix(in srgb, var(--warning-color) 20%, transparent);
+    color: var(--warning-color); /* Or a darker shade of yellow for text */
+    border-color: color-mix(in srgb, var(--warning-color) 50%, transparent);
+}
+.dark-theme .auth-message.warning {
+     color: color-mix(in srgb, var(--warning-color) 90%, var(--black-color) 10%); /* Ensure good contrast */
+}
+
+
+/* Loading and Error States (Full Page / Large Section) */
+.loading-state, .error-message-fullpage, .no-results-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+.loading-state i, .error-message-fullpage i, .no-results-message i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+    color: var(--primary-color); /* Icon color for loading/info */
+}
+.error-message-fullpage {
+    background-color: color-mix(in srgb, var(--danger-color) 10%, transparent);
+    color: var(--danger-color);
+    border: 1px solid color-mix(in srgb, var(--danger-color) 30%, transparent);
+}
+.error-message-fullpage i {
+    color: var(--danger-color);
+}
+.dark-theme .error-message-fullpage {
+    color: color-mix(in srgb, var(--danger-color) 80%, var(--white-color) 20%);
+}
+.no-results-message i {
+    color: var(--text-muted);
+}
+
+/* Profile Completion Overlay */
+.profile-completion-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Darker overlay */
+    backdrop-filter: blur(6px); /* More blur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2500;
+    color: var(--white-color); /* Default text color for overlay */
+    opacity: 0; /* Hidden by default, shown with JS */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.profile-completion-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+.profile-completion-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 35px 45px; /* More padding */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    text-align: center;
+    max-width: 550px; /* Slightly wider */
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.profile-completion-overlay.show .profile-completion-content {
+    transform: scale(1);
+    opacity: 1;
+}
+.profile-completion-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+.profile-completion-content p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Responsive adjustments for general layout */
+@media (max-width: 992px) { /* Tablet and smaller */
+    .main-content-wrapper {
+        margin-left: 70px; /* Collapsed sidebar width */
+    }
+    .main-content-wrapper.sidebar-collapsed {
+        margin-left: 70px; /* No change as sidebar is always collapsed here */
+    }
+    .form-row {
+        gap: 15px;
+    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.35rem; }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    body {
+        font-size: 14px;
+    }
+    .main-content-wrapper {
+        margin-left: 0; /* Sidebar is bottom bar */
+        padding: 15px;
+        padding-bottom: 85px;  /* Space for bottom mobile sidebar */
+    }
+    .main-content-wrapper.sidebar-collapsed { /* Not relevant for mobile bottom bar */
+        margin-left: 0;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0; /* Reset gap, form-group margin will handle spacing */
+    }
+    .form-row .form-group {
+        min-width: 100%; /* Full width for form groups in a row */
+    }
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .btn-lg {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    .profile-completion-content {
+        padding: 25px 30px;
+        max-width: 90%;
+    }
+    .profile-completion-content h2 { font-size: 1.5rem; }
+    .profile-completion-content p { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .main-content-wrapper {
+        padding: 10px;
+        padding-bottom: 80px; /* Adjust for mobile nav */
+    }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 360px) {
+    .btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    .btn-lg {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    .profile-completion-content {
+        padding: 20px 25px;
+    }
+    
+}

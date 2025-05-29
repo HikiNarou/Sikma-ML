@@ -1,0 +1,198 @@
+/* SikmaV3 - assets/css/modals.css (Diperbarui) */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1500; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Cegah scroll body saat modal terbuka */
+    background-color: rgba(0, 0, 0, 0.65); /* Overlay lebih gelap */
+    backdrop-filter: blur(5px); /* Blur lebih terasa */
+    animation: modalFadeIn 0.3s ease-out forwards;
+}
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.modal.show {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    margin: auto; 
+    padding: 25px 30px;
+    border: none;
+    width: 90%;
+    max-width: 550px; /* Default max-width */
+    border-radius: 12px; /* Radius konsisten */
+    position: relative;
+    box-shadow: 0 10px 30px var(--shadow-color); /* Shadow lebih baik */
+    animation: modalSlideIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    max-height: 90vh; /* Mencegah modal terlalu tinggi */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Konten modal akan di-scroll di modal-body */
+}
+@keyframes modalSlideIn {
+    from { transform: translateY(-40px) scale(0.95); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+.modal-content.modal-lg {
+    max-width: 800px;
+}
+.modal-content.modal-sm {
+    max-width: 400px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0; /* Header tidak mengecil */
+}
+.modal-header h3 {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak ikon dan judul */
+}
+.modal-header h3 i {
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+.close-btn { /* Tombol close di header modal */
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 5px;
+    transition: color 0.2s, transform 0.2s;
+}
+.close-btn:hover {
+    color: var(--danger-color);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.modal-body {
+    overflow-y: auto; /* Scroll untuk konten yang panjang */
+    padding-right: 10px; /* Ruang untuk scrollbar jika muncul */
+    margin-bottom: 20px;
+    flex-grow: 1; /* Body mengisi ruang yang tersedia */
+    /* Styling scrollbar kustom */
+}
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-body::-webkit-scrollbar-track {
+    background: var(--input-bg); /* Atau var(--body-bg) */
+    border-radius: 4px;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 4px;
+}
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+.modal-footer {
+    padding-top: 20px; /* Padding atas lebih banyak */
+    margin-top: auto; /* Dorong footer ke bawah jika body pendek */
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px; /* Jarak antar tombol footer */
+    flex-shrink: 0; /* Footer tidak mengecil */
+}
+.modal-footer .btn { /* Styling umum untuk tombol di footer modal */
+    min-width: 100px; /* Lebar minimal tombol */
+}
+.modal-footer .btn-secondary.close-btn-footer:hover { /* Tombol batal */
+    background-color: color-mix(in srgb, var(--tag-bg) 70%, var(--black-color) 30%);
+}
+.dark-theme .modal-footer .btn-secondary.close-btn-footer:hover {
+    background-color: color-mix(in srgb, var(--tag-bg-dark) 70%, var(--white-color) 30%);
+}
+
+
+/* Specific for Item Entry Modal in Profile Page */
+.item-entry-modal .form-group {
+    margin-bottom: 18px; /* Jarak konsisten */
+}
+.item-entry-modal .modal-fields-group {
+    padding: 15px; /* Padding lebih */
+    background-color: color-mix(in srgb, var(--body-bg) 60%, transparent); /* Latar belakang lebih halus */
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px; /* Jarak antar grup field */
+}
+.item-entry-modal .modal-fields-group .form-row {
+    gap: 15px;
+}
+.item-entry-modal .modal-fields-group .form-group {
+    margin-bottom: 15px; /* Kurangi margin bawah di dalam grup */
+}
+.item-entry-modal .modal-fields-group small { /* Untuk helper text di modal */
+    font-size: 12px;
+    color: var(--text-muted);
+    display: block;
+    margin-top: -10px; /* Tarik ke atas jika di bawah input */
+    margin-bottom: 10px;
+}
+
+/* Responsive Modals */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+        max-height: 88vh; /* Sedikit lebih tinggi */
+    }
+    .modal-header h3 {
+        font-size: 18px;
+    }
+    .close-btn {
+        font-size: 26px; /* Sedikit lebih kecil */
+    }
+    .modal-body {
+        padding-right: 5px;
+    }
+}
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px; /* Padding atas/bawah lebih banyak */
+        max-height: 90vh;
+    }
+     .modal-header {
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+    .modal-header h3 {
+        font-size: 17px;
+    }
+    .modal-body {
+        padding-right: 0;
+    }
+    .modal-footer {
+        flex-direction: column-reverse; /* Tombol utama (Simpan) di atas Batal */
+        gap: 10px;
+    }
+    .modal-footer .btn {
+        width: 100%; 
+    }
+}
