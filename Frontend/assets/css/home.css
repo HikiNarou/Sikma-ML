@@ -56,7 +56,7 @@
     justify-content: flex-end;
     padding: 20px 25px; 
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    cursor: pointer; /* Tetap pointer untuk keseluruhan kartu jika ada card-link */
+    cursor: pointer; 
 }
 .recommendation-card.swiper-slide:hover {
     transform: translateY(-8px) scale(1.03);
@@ -80,7 +80,7 @@
 
 .recommendation-card .card-content {
     position: relative;
-    z-index: 2; /* Konten di atas overlay */
+    z-index: 2; 
 }
 .recommendation-card h3 { 
     font-size: 20px; 
@@ -134,9 +134,8 @@
     font-size: 13px;
     background-color: var(--primary-color);
     color: white !important;
-    /* Pastikan tombol ini punya z-index lebih tinggi dari card-link jika ada tumpang tindih */
-    position: relative; /* Untuk z-index */
-    z-index: 5; /* Lebih tinggi dari card-link (jika card-link z-index:1) dan card-info (z-index:3 saat hover) */
+    position: relative; 
+    z-index: 5; 
 }
 .recommendation-card .btn-detail:hover {
     background-color: var(--primary-hover-color);
@@ -252,7 +251,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Link pembungkus di bawah konten info */
+    z-index: 1; 
 }
 .card.card-hover-effect .card-img-hovered {
     --card-img-hovered-overlay: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 60%);
@@ -265,7 +264,7 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     position: relative;
-    z-index: 0; /* Gambar di paling bawah */
+    z-index: 0; 
 }
 .card.card-hover-effect .card-img-hovered::before {
     content: '';
@@ -275,7 +274,7 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     transition: background-image 0.35s ease-in-out;
-    z-index: 1; /* Overlay di atas gambar */
+    z-index: 1; 
 }
 .card.card-hover-effect .card-info {
     position: relative;
@@ -284,7 +283,7 @@
     background-color: var(--card-bg);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    z-index: 2; /* Info di atas link pembungkus dan overlay gambar awal */
+    z-index: 2; 
 }
 .card.card-hover-effect .card-info .card-about {
     display: flex;
@@ -326,7 +325,7 @@
     font-weight: 600;
     padding-bottom: 0.5rem;
     margin-top: 0.25rem;
-    transition: all 0.35s ease-in-out;
+    transition: color 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s; /* Disesuaikan dari 'all' */
     color: var(--text-color);
     line-height: 1.3;
 }
@@ -346,20 +345,31 @@
 .card.card-hover-effect .explore-btn-detail {
     margin-top: 0.5rem;
     align-self: flex-start;
-    transition: opacity 0.2s ease-in-out, background-color 0.2s, color 0.2s; /* Tambah transisi untuk tombol */
-    position: relative; /* Untuk z-index */
-    z-index: 5; /* Pastikan tombol di atas elemen lain di dalam .card-info */
+    opacity: 0; /* Initial state: hidden */
+    transform: translateY(15px); /* Initial state: slightly lower to animate upwards */
+    pointer-events: none;
+    /* PERBAIKAN UTAMA: 
+      - Opacity dan Transform sekarang memiliki delay 0.1s untuk sinkronisasi.
+      - Background-color dan color transition adalah untuk direct hover pada tombol itu sendiri,
+        jadi tidak memerlukan delay yang terkait dengan card hover.
+    */
+    transition: opacity 0.25s ease-out 0.1s,  /* DELAY DITAMBAHKAN/DISESUAIKAN */
+                transform 0.3s ease-out 0.1s, /* DELAY DISESUAIKAN */
+                background-color 0.2s ease-out, /* Untuk direct button hover */
+                color 0.2s ease-out; /* Untuk direct button hover */
+    position: relative; 
+    z-index: 5; 
 }
 
 /* Hover effects for company cards */
 .card.card-hover-effect:hover {
-    cursor: default; /* Ubah cursor default karena link pembungkus mungkin tidak lagi jadi target utama */
+    cursor: default; 
     box-shadow: 0px 10px 25px color-mix(in srgb, var(--shadow-color) 150%, transparent), 
                 0px 5px 12px color-mix(in srgb, var(--shadow-color) 120%, transparent);
     transform: translateY(-6px) scale(1.025);
 }
 .card.card-hover-effect:hover .card-img-hovered {
-    --card-img-hovered-overlay: linear-gradient(to bottom, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.7) 100%); /* Overlay sedikit lebih ringan agar tombol terlihat */
+    --card-img-hovered-overlay: linear-gradient(to bottom, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.7) 100%); 
     height: 100%;
     border-radius: 12px;
 }
@@ -370,32 +380,37 @@
     left: 0;
     right: 0;
     padding: 1rem 1.2rem; 
-    z-index: 3; /* Info di atas overlay gambar */
+    z-index: 3; 
 }
 
-/* PERUBAHAN UTAMA: Tombol "Lihat Detail" tetap terlihat dan berfungsi */
 .card.card-hover-effect:hover .card-about,
 .card.card-hover-effect:hover .card-creator {
-    opacity: 0; /* Sembunyikan tag dan deskripsi singkat */
+    opacity: 0; 
     transition-delay: 0s; 
     pointer-events: none; 
 }
 .card.card-hover-effect:hover .card-title {
     color: #ffffff; 
-    transform: translateY(-10px); /* Naikkan judul sedikit untuk memberi ruang tombol */
+    transform: translateY(-10px); 
     padding-bottom: 0;
-    transition: color 0.3s ease-out 0.1s, transform 0.3s ease-out 0.1s; 
+    /* Transisi sudah diatur di .card.card-hover-effect .card-title */
 }
 .card.card-hover-effect:hover .explore-btn-detail {
-    opacity: 1 !important; /* Pastikan tombol terlihat */
-    pointer-events: auto !important; /* Pastikan tombol bisa diklik */
-    background-color: var(--primary-color); /* Pastikan style tombol tetap */
+    opacity: 1 !important; 
+    transform: translateY(5px); /* Final position on card hover */
+    pointer-events: auto !important; 
+    /* background-color dan color sudah diatur oleh class .btn-primary (jika ada)
+      atau akan mengambil dari style default .btn. Tidak perlu di-override di sini
+      kecuali jika ingin warna berbeda spesifik saat card di-hover.
+      Jika .btn-primary sudah memberikan warna biru, baris di bawah ini bisa jadi redundan.
+    */
+    background-color: var(--primary-color); 
     color: white !important;
-    /* Posisikan tombol di bawah judul */
-    transform: translateY(5px); /* Sesuaikan posisi Y jika perlu */
 }
+/* Style untuk direct hover pada tombol SETELAH card di-hover */
 .card.card-hover-effect:hover .explore-btn-detail:hover {
     background-color: var(--primary-hover-color) !important;
+    /* transform: translateY(5px) scale(1.02); /* Optional: sedikit scaling pada direct hover */
 }
 
 
